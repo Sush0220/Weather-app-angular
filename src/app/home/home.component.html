@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center align-items-center">
+    <div class="mycontainer bg-primary-gradient">
+
+        <div class="mt-5">
+            <h3 class="text-white">Weather App Angular</h3>
+        </div>
+        <div class="flex-row mt-5">
+            <input class="rounded" type="search" placeholder="Enter City Name" #cityName />
+            <button (click)="getWeather(cityName.value)" class="bg-success rounded">Search</button>
+        </div>
+
+        <div class="card text-white bg-primary m-5 shadow" style="max-width: 18rem;">
+            <div class="card-header text-center">
+                <h2>{{cityName.value}}</h2>
+                <img src="{{iconURL}}" alt="weather image">
+            </div>
+            <div class="card-body">
+                <p class="card-text">Summary: {{summary}}</p>
+                <p class="card-text">Temperature: {{temperature | number: '1.0-0'}} °{{units=='imperial' ? 'F' : 'C'}}
+                </p>
+                <p class="card-text">Feels like: {{feelsLikeTemp | number: '1.0-0'}} °{{units=='imperial' ? 'F' : 'C'}}
+                </p>
+                <p class="card-text">Pressure: {{pressure}} hPa</p>
+                <p class="card-text">Humidity: {{humidity}} %</p>
+            </div>
+        </div>
+    </div>
+</div>

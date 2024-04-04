@@ -1,0 +1,17 @@
+.mycontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to right, #42275a, #734b6d);
+    height: 100vh;
+    width: 100vw;
+}
+
+p {
+    margin: 5px;
+}
+
+.myRadioButtons {
+    display: flex;
+    justify-content: space-around;
+}
